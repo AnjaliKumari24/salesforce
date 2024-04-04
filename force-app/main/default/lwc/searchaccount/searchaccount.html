@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <lightning-input name="actName" type="text" label="Account Name" value={accountName} onchange={handleOnChangeName}></lightning-input>
+        <lightning-input name="actPhone" type="phone" label="Account Phone" value={accountPhone} onchange={handleOnChangeName}></lightning-input>
+        <lightning-input name="billStreet" type="text" label="Billing Street" value={billingStreet} onchange={handleOnChangeStreet}></lightning-input>
+        <lightning-input name="billState" type="text" label="Billing State" value={billingState} onchange={handleOnChangeState}></lightning-input>
+        <lightning-input name="billCity" type="text" label="Billing City" value={billingCity} onchange={handleOnChangeCity}></lightning-input>
+        <lightning-input name="billZipcode" type="text" label="Billing Zipcode" value={billingZipcode} onchange={handleOnChangeZipcode}></lightning-input>
+        <lightning-button variant="brand" label="Search Account" title="Click here to initiate Search" onclick={searchAct}></lightning-button>
+        <lightning-button variant="brand" label="Reset Search" title="Click here to clear all Search" onclick={ResetSerachHandle}></lightning-button>
+        <lightning-button variant="brand" label={Savelabel} title="Click here to initiate Search" onclick={searchAct}></lightning-button>
+    </lightning-card>
+</template>

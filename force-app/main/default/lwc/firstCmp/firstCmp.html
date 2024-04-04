@@ -1,0 +1,32 @@
+<template>
+    <template lwc:if={isActive}>
+        <h1>is Template ONE</h1> 
+    </template>
+    <template lwc:else>
+        <h1>is Template TWO</h1> 
+    </template>
+
+
+    <div>
+       
+        <h2>
+            Hello {name}
+        </h2>
+        <lightning-input 
+        label="Enter Name" 
+        value={name} 
+        onchange={handleOnchange}>
+        </lightning-input>
+        <lightning-input type="checkbox" label="Active" value={isActive} onchange={handleChange}></lightning-input>
+
+    </div>
+    <template for:each={cities}
+    for:item="cityName">
+    <p key={cityName.Id}>
+
+    <b>
+        {cityName.Name}
+    </b>
+    </p>
+    </template>
+</template>
